@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 from .agents.automation import AutomationAgent
 from .agents.cloud_deploy import CloudDeployAgent
 from .agents.company import CompanyAgent
+from .agents.image_generator import ImageGeneratorAgent
 from .agents.integrations import IntegrationAgent
 from .agents.modules import ModuleAgent
 from .agents.products import ProductAgent
@@ -39,6 +40,7 @@ class Orchestrator:
             AutomationAgent(self.connector),
             UserAgent(self.connector),
             CloudDeployAgent(self.connector),
+            ImageGeneratorAgent(self.connector),
         ]
     
     def configure(self, request: str, params: Dict[str, Any] = None) -> Dict[str, Any]:
