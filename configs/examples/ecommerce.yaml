@@ -1,0 +1,35 @@
+# Bearings Inc eCommerce Configuration
+
+company:
+  name: "Bearings Inc"
+  email: "info@bearingsinc.com"
+  phone: "+1-555-BEARING"
+  website: "https://bearingsinc.com"
+  street: "123 Industrial Blvd"
+  city: "Chicago"
+  zip: "60601"
+  country_id: 233 # USA
+  currency_id: 2 # USD
+
+modules:
+  - website
+  - website_sale
+  - crm
+  - stock
+  - sale_stock
+  - delivery
+  - account
+  - account_invoicing
+  - payment
+
+products:
+  import_from: "../../inventory_with_descriptions.csv"
+  auto_publish: true
+
+integrations:
+  - name: "Best Buy"
+    type: "marketplace"
+  - name: "Stripe"
+    type: "payment"
+  - name: "UPS"
+    type: "shipping"
