@@ -12,19 +12,90 @@ class ModuleAgent(OdooAgent):
     KEYWORDS = ['module', 'install', 'activate', 'app']
     
     MODULE_MAP = {
+        # Website & eCommerce
         'website': 'website',
         'ecommerce': 'website_sale',
         'shop': 'website_sale',
+        'online store': 'website_sale',
+        'blog': 'website_blog',
+        'forum': 'website_forum',
+        'slides': 'website_slides',
+        'events': 'website_event',
+        'livechat': 'im_livechat',
+        
+        # Sales & CRM
         'crm': 'crm',
         'sales': 'sale_management',
+        'quotations': 'sale_management',
+        'subscriptions': 'sale_subscription',
+        'rental': 'sale_renting',
+        'coupons': 'sale_coupon',
+        'loyalty': 'loyalty',
+        
+        # Inventory & Manufacturing
         'inventory': 'stock',
+        'warehouse': 'stock',
+        'manufacturing': 'mrp',
+        'mrp': 'mrp',
+        'plm': 'mrp_plm',
+        'quality': 'quality_control',
+        'maintenance': 'maintenance',
+        'barcode': 'stock_barcode',
+        
+        # Accounting & Finance
         'accounting': 'account',
         'invoicing': 'account_invoicing',
-        'manufacturing': 'mrp',
+        'expenses': 'hr_expense',
+        'assets': 'account_asset',
+        'budget': 'account_budget',
+        
+        # Point of Sale
         'pos': 'point_of_sale',
-        'project': 'project',
+        'point of sale': 'point_of_sale',
+        'restaurant': 'pos_restaurant',
+        
+        # Human Resources
         'hr': 'hr',
+        'employees': 'hr',
+        'recruitment': 'hr_recruitment',
+        'appraisals': 'hr_appraisal',
+        'attendance': 'hr_attendance',
+        'timesheet': 'hr_timesheet',
+        'payroll': 'hr_payroll',
+        'fleet': 'fleet',
+        
+        # Project Management
+        'project': 'project',
+        'tasks': 'project',
+        'timesheet': 'hr_timesheet',
+        'helpdesk': 'helpdesk',
+        
+        # Marketing
         'marketing': 'marketing_automation',
+        'email marketing': 'mass_mailing',
+        'sms marketing': 'mass_mailing_sms',
+        'social marketing': 'social_media',
+        'surveys': 'survey',
+        
+        # Productivity
+        'calendar': 'calendar',
+        'contacts': 'contacts',
+        'documents': 'documents',
+        'sign': 'sign',
+        'approvals': 'approvals',
+        'voip': 'voip',
+        
+        # Services
+        'field service': 'industry_fsm',
+        'appointments': 'appointment',
+        
+        # Purchase
+        'purchase': 'purchase',
+        'purchase agreements': 'purchase_requisition',
+        
+        # Other
+        'iot': 'iot',
+        'studio': 'web_studio',
     }
     
     def can_handle(self, request: str) -> bool:
