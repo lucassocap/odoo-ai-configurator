@@ -12,6 +12,7 @@ from .agents.modules import ModuleAgent
 from .agents.products import ProductAgent
 from .agents.users import UserAgent
 from .agents.website import WebsiteAgent
+from .agents.website_config import WebsiteConfigAgent
 from .connectors.odoo import OdooConnector
 
 
@@ -33,6 +34,7 @@ class Orchestrator:
             ModuleAgent(self.connector),
             ProductAgent(self.connector),
             WebsiteAgent(self.connector),
+            WebsiteConfigAgent(self.connector),
             IntegrationAgent(self.connector),
             AutomationAgent(self.connector),
             UserAgent(self.connector),

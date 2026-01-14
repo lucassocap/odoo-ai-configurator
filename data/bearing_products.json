@@ -1,0 +1,197 @@
+{
+  "products": [
+    {
+      "sku": "20205T.C3",
+      "name": "FAG Bearing 20205T.C3",
+      "price": 179.24,
+      "description": "High-quality FAG bearing. SKU: 20205T.C3",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/20205T.C3_FAG.jpg",
+      "category": "Special Bearings",
+      "brand": "FAG"
+    },
+    {
+      "sku": "22230",
+      "name": "FAG Bearing 22230",
+      "price": 653.55,
+      "description": "High-quality FAG bearing. SKU: 22230",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/22230_FAG.jpg",
+      "category": "Special Bearings",
+      "brand": "FAG"
+    },
+    {
+      "sku": "EAS.MA.T41A",
+      "name": "FAG Bearing EAS.MA.T41A",
+      "price": 297.88,
+      "description": "High-quality FAG bearing. SKU: EAS.MA.T41A",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/EAS.MA.T41A_FAG.jpg",
+      "category": "Special Bearings",
+      "brand": "FAG"
+    },
+    {
+      "sku": "EAS.MA.T41A",
+      "name": "FAG Bearing EAS.MA.T41A",
+      "price": 190.66,
+      "description": "High-quality FAG bearing. SKU: EAS.MA.T41A",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/EAS.MA.T41A_FAG.jpg",
+      "category": "Special Bearings",
+      "brand": "FAG"
+    },
+    {
+      "sku": "0.0022217 EK",
+      "name": "SKF Bearing 0.0022217 EK",
+      "price": 442.36,
+      "description": "High-quality SKF bearing. SKU: 0.0022217 EK",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.0022217_EK_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "W33",
+      "name": "SKF Bearing W33",
+      "price": 152.04,
+      "description": "High-quality SKF bearing. SKU: W33",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/W33_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "250.7922310 E",
+      "name": "SKF Bearing 250.7922310 E",
+      "price": 175.11,
+      "description": "High-quality SKF bearing. SKU: 250.7922310 E",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/250.7922310_E_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "0.00PC308G1S",
+      "name": "NACHI Bearing 0.00PC308G1S",
+      "price": 0.0,
+      "description": "High-quality NACHI bearing. SKU: 0.00PC308G1S",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.00PC308G1S_NACHI.jpg",
+      "category": "Special Bearings",
+      "brand": "NACHI"
+    },
+    {
+      "sku": "0.00NW7202BJG",
+      "name": "SKF Bearing 0.00NW7202BJG",
+      "price": 0.0,
+      "description": "High-quality SKF bearing. SKU: 0.00NW7202BJG",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.00NW7202BJG_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "0.00NW7202ZBG",
+      "name": "SKF Bearing 0.00NW7202ZBG",
+      "price": 0.0,
+      "description": "High-quality SKF bearing. SKU: 0.00NW7202ZBG",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.00NW7202ZBG_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "ANR",
+      "name": "SKF Bearing ANR",
+      "price": 268.5,
+      "description": "High-quality SKF bearing. SKU: ANR",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/ANR_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "BM G",
+      "name": "SKF Bearing BM G",
+      "price": 122.62,
+      "description": "High-quality SKF bearing. SKU: BM G",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/BM_G_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "BM G",
+      "name": "SKF Bearing BM G",
+      "price": 317.32,
+      "description": "High-quality SKF bearing. SKU: BM G",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/BM_G_SKF.jpg",
+      "category": "Special Bearings",
+      "brand": "SKF"
+    },
+    {
+      "sku": "0.004206",
+      "name": "FAG Bearing 0.004206",
+      "price": 63.24,
+      "description": "High-quality FAG bearing. SKU: 0.004206",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.004206_FAG.jpg",
+      "category": "Ball Bearings",
+      "brand": "FAG"
+    },
+    {
+      "sku": "02",
+      "name": "NTN Bearing 02",
+      "price": 43.42,
+      "description": "High-quality NTN bearing. SKU: 02",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/02_NTN.jpg",
+      "category": "Special Bearings",
+      "brand": "NTN"
+    },
+    {
+      "sku": "0.00W5203 RS",
+      "name": "NTN Bearing 0.00W5203 RS",
+      "price": 40.15,
+      "description": "High-quality NTN bearing. SKU: 0.00W5203 RS",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/0.00W5203_RS_NTN.jpg",
+      "category": "Special Bearings",
+      "brand": "NTN"
+    },
+    {
+      "sku": "2RS",
+      "name": "SW Bearing 2RS",
+      "price": 24.4,
+      "description": "High-quality SW bearing. SKU: 2RS",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/2RS_SW.jpg",
+      "category": "Special Bearings",
+      "brand": "SW"
+    },
+    {
+      "sku": "5208 WD",
+      "name": "NTN Bearing 5208 WD",
+      "price": 96.04,
+      "description": "High-quality NTN bearing. SKU: 5208 WD",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/5208_WD_NTN.jpg",
+      "category": "Special Bearings",
+      "brand": "NTN"
+    },
+    {
+      "sku": "734 L",
+      "name": "NTN Bearing 734 L",
+      "price": 0.0,
+      "description": "High-quality NTN bearing. SKU: 734 L",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/734_L_NTN.jpg",
+      "category": "Special Bearings",
+      "brand": "NTN"
+    },
+    {
+      "sku": "CFFG",
+      "name": "MRC Bearing CFFG",
+      "price": 66.76,
+      "description": "High-quality MRC bearing. SKU: CFFG",
+      "image_path": "/Users/lucasnapoli/Desktop/projects/TradingAgents-main/netora_odoo/product_images/CFFG_MRC.jpg",
+      "category": "Special Bearings",
+      "brand": "MRC"
+    }
+  ],
+  "total": 20,
+  "categories": [
+    "Special Bearings",
+    "Ball Bearings"
+  ],
+  "brands": [
+    "FAG",
+    "SW",
+    "NTN",
+    "NACHI",
+    "MRC",
+    "SKF"
+  ]
+}
