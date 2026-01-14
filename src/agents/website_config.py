@@ -148,10 +148,23 @@ class WebsiteConfigAgent(OdooAgent):
         """Import products with images and descriptions"""
         try:
             products = params.get('products', [])
+            
+            # VALIDATION PHASE
+            self.log("🔍 Validating products before import...")
+            validated_products, validation_errors = self._validate_products(products)
+            
+            if validation_errors:
+                self.log(f"⚠️  Found {len(validation_errors)} validation errors", "WARNING")
+                for error in validation_errors:
+                    self.log(f"   - {error}", "WARNING")
+            
+            self.log(f"✅ {len(validated_products)}/{len(products)} products passed validation")
+            
+            # IMPORT PHASE
             imported = []
             errors = []
             
-            for product in products:
+            for product in validated_products:
                 try:
                     # Check if product exists
                     existing = self.odoo.search('product.template', [
@@ -181,14 +194,66 @@ class WebsiteConfigAgent(OdooAgent):
             
             return {
                 'status': 'success' if imported else 'error',
-                'message': f'Imported {len(imported)} products',
+                'message': f'Imported {len(imported)}/{len(products)} products',
                 'imported': imported,
-                'errors': errors
+                'validation_errors': validation_errors,
+                'import_errors': errors,
+                'validated': len(validated_products),
+                'total': len(products)
             }
             
         except Exception as e:
             self.log(f"Error importing products: {str(e)}", "ERROR")
             return {'status': 'error', 'message': str(e)}
+    
+    def _validate_products(self, products: List[Dict]) -> tuple:
+        """Validate products before import"""
+        validated = []
+        errors = []
+        
+        for i, product in enumerate(products):
+            product_errors = []
+            
+            # Required fields validation
+            if not product.get('sku'):
+                product_errors.append(f"Product {i+1}: Missing SKU")
+            
+            if not product.get('name'):
+                product_errors.append(f"Product {i+1}: Missing name")
+            
+            # Price validation
+            price = product.get('price', 0)
+            try:
+                price_float = float(price)
+                if price_float < 0:
+                    product_errors.append(f"Product {product.get('sku')}: Negative price")
+            except (ValueError, TypeError):
+                product_errors.append(f"Product {product.get('sku')}: Invalid price format")
+            
+            # Image validation
+            image_path = product.get('image_path')
+            if image_path:
+                from pathlib import Path
+                if not Path(image_path).exists():
+                    product_errors.append(f"Product {product.get('sku')}: Image not found at {image_path}")
+                elif not Path(image_path).suffix.lower() in ['.jpg', '.jpeg', '.png', '.gif']:
+                    product_errors.append(f"Product {product.get('sku')}: Invalid image format")
+            
+            # Description validation
+            description = product.get('description', '')
+            if len(description) < 10:
+                product_errors.append(f"Product {product.get('sku')}: Description too short (min 10 chars)")
+            
+            # Category validation
+            if not product.get('category'):
+                product_errors.append(f"Product {product.get('sku')}: Missing category")
+            
+            if product_errors:
+                errors.extend(product_errors)
+            else:
+                validated.append(product)
+        
+        return validated, errors
     
     def _prepare_product_data(self, product: Dict) -> Dict:
         """Prepare product data for Odoo"""
