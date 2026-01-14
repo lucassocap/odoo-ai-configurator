@@ -14,6 +14,7 @@ from .agents.products import ProductAgent
 from .agents.users import UserAgent
 from .agents.website import WebsiteAgent
 from .agents.website_config import WebsiteConfigAgent
+from .agents.website_optimizer import WebsiteOptimizerAgent
 from .connectors.odoo import OdooConnector
 
 
@@ -41,6 +42,7 @@ class Orchestrator:
             UserAgent(self.connector),
             CloudDeployAgent(self.connector),
             ImageGeneratorAgent(self.connector),
+            WebsiteOptimizerAgent(self.connector),
         ]
     
     def configure(self, request: str, params: Dict[str, Any] = None) -> Dict[str, Any]:

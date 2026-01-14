@@ -11,6 +11,7 @@ from .product import ProductAgent
 from .user import UserAgent
 from .website import WebsiteAgent
 from .website_config import WebsiteConfigAgent
+from .website_optimizer import WebsiteOptimizerAgent
 
 __all__ = [
     'CompanyAgent',
@@ -22,5 +23,6 @@ __all__ = [
     'AutomationAgent',
     'UserAgent',
     'CloudDeployAgent',
-    'ImageGeneratorAgent'
+    'ImageGeneratorAgent',
+    'WebsiteOptimizerAgent'
 ]
