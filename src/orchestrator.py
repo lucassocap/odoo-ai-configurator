@@ -4,9 +4,13 @@ Coordinates agents to fulfill configuration requests
 """
 from typing import Any, Dict, List
 
+from .agents.automation import AutomationAgent
 from .agents.company import CompanyAgent
+from .agents.integrations import IntegrationAgent
 from .agents.modules import ModuleAgent
 from .agents.products import ProductAgent
+from .agents.users import UserAgent
+from .agents.website import WebsiteAgent
 from .connectors.odoo import OdooConnector
 
 
@@ -27,6 +31,10 @@ class Orchestrator:
             CompanyAgent(self.connector),
             ModuleAgent(self.connector),
             ProductAgent(self.connector),
+            WebsiteAgent(self.connector),
+            IntegrationAgent(self.connector),
+            AutomationAgent(self.connector),
+            UserAgent(self.connector),
         ]
     
     def configure(self, request: str, params: Dict[str, Any] = None) -> Dict[str, Any]:
