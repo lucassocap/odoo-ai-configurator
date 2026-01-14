@@ -2,7 +2,7 @@
 
 ## Complete Automated Setup
 
-This directory contains everything needed to set up Odoo 17 from scratch.
+This directory contains everything needed to set up Odoo 18 from scratch.
 
 ## Quick Start (One Command)
 
@@ -12,7 +12,7 @@ cd odoo-ai-configurator
 ```
 
 This will:
-1. ✅ Setup Odoo 17 with Docker
+1. ✅ Setup Odoo 18 with Docker
 2. ✅ Create clean database
 3. ✅ Configure Bearings Inc
 4. ✅ Install all modules
@@ -71,7 +71,7 @@ scripts/
 ## Docker Compose
 
 The `docker-compose.yml` includes:
-- **Odoo 17** (latest stable)
+- **Odoo 18** (latest stable)
 - **PostgreSQL 15**
 - Persistent volumes
 - Auto-restart

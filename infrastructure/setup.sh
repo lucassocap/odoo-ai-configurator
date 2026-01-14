@@ -1,10 +1,10 @@
 #!/bin/bash
-# Setup Odoo 17 Infrastructure
-# This script sets up a fresh Odoo 17 instance with PostgreSQL
+# Setup Odoo 18 Infrastructure
+# This script sets up a fresh Odoo 18 instance with PostgreSQL
 
 set -e
 
-echo "🚀 Setting up Odoo 17 Infrastructure"
+echo "🚀 Setting up Odoo 18 Infrastructure"
 echo "===================================="
 
 # Check if Docker is running
@@ -48,7 +48,7 @@ RETRY_COUNT=0
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
     if curl -s http://localhost:8069 > /dev/null; then
         echo ""
-        echo "✅ Odoo 17 is ready!"
+        echo "✅ Odoo 18 is ready!"
         echo ""
         echo "📋 Connection details:"
         echo "   URL: http://localhost:8069"
