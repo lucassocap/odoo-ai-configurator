@@ -6,10 +6,10 @@ Inspired by Christopher Nolan's visual style: dramatic, professional, impactful
 """
 from typing import Any, Dict, List
 
-from .base import BaseAgent
+from .base import OdooAgent
 
 
-class ImageGeneratorAgent(BaseAgent):
+class ImageGeneratorAgent(OdooAgent):
     """Agent for generating professional website images"""
     
     def __init__(self, odoo_connector):

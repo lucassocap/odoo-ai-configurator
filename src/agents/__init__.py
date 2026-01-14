@@ -5,10 +5,10 @@ from .automation import AutomationAgent
 from .cloud_deploy import CloudDeployAgent
 from .company import CompanyAgent
 from .image_generator import ImageGeneratorAgent
-from .integration import IntegrationAgent
-from .module import ModuleAgent
-from .product import ProductAgent
-from .user import UserAgent
+from .integrations import IntegrationAgent
+from .modules import ModuleAgent
+from .products import ProductAgent
+from .users import UserAgent
 from .website import WebsiteAgent
 from .website_config import WebsiteConfigAgent
 from .website_optimizer import WebsiteOptimizerAgent
