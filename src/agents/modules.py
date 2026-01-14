@@ -134,3 +134,77 @@ class ModuleAgent(OdooAgent):
             'failed': failed,
             'total': len(modules)
         }
+    
+    def _install_module(self, module_name: str) -> bool:
+        """Install a single module by technical name"""
+        try:
+            self.log(f"Installing module: {module_name}")
+            
+            # Method 1: Try to install directly by technical name
+            try:
+                # Search for module by exact technical name
+                module_ids = self.odoo.search(
+                    'ir.module.module',
+                    [('name', '=', module_name)],
+                    limit=1
+                )
+                
+                if module_ids:
+                    module_id = module_ids[0]
+                    
+                    # Check current state
+                    module_data = self.odoo.read('ir.module.module', [module_id], ['state'])
+                    current_state = module_data[0]['state']
+                    
+                    if current_state == 'installed':
+                        self.log(f"Module {module_name} already installed")
+                        return True
+                    
+                    # Install the module
+                    self.odoo.execute(
+                        'ir.module.module',
+                        'button_immediate_install',
+                        [module_id]
+                    )
+                    
+                    self.log(f"Installed: {module_name}")
+                    return True
+                else:
+                    self.log(f"Module not found: {module_name}", "WARNING")
+                    return False
+                    
+            except Exception as e:
+                # If direct installation fails, try alternative method
+                self.log(f"Direct install failed for {module_name}, trying alternative: {str(e)}", "WARNING")
+                
+                # Method 2: Try to install via upgrade
+                try:
+                    # Update module list first
+                    self.odoo.execute('ir.module.module', 'update_list')
+                    
+                    # Search again
+                    module_ids = self.odoo.search(
+                        'ir.module.module',
+                        [('name', '=', module_name)],
+                        limit=1
+                    )
+                    
+                    if module_ids:
+                        self.odoo.execute(
+                            'ir.module.module',
+                            'button_immediate_install',
+                            module_ids
+                        )
+                        self.log(f"Installed via alternative method: {module_name}")
+                        return True
+                    else:
+                        self.log(f"Module {module_name} not available in this Odoo version", "ERROR")
+                        return False
+                        
+                except Exception as e2:
+                    self.log(f"Alternative install also failed for {module_name}: {str(e2)}", "ERROR")
+                    return False
+                    
+        except Exception as e:
+            self.log(f"Error installing {module_name}: {str(e)}", "ERROR")
+            return False
