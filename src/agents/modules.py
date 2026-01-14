@@ -123,30 +123,9 @@ class ModuleAgent(OdooAgent):
             # Map keyword to actual module name
             module_name = self.MODULE_MAP.get(module.lower(), module)
             
-            try:
-                # Search for module
-                module_ids = self.odoo.search(
-                    'ir.module.module',
-                    [('name', '=', module_name)]
-                )
-                
-                if not module_ids:
-                    self.log(f"Module not found: {module_name}", "WARNING")
-                    failed.append(module_name)
-                    continue
-                
-                # Install module
-                self.odoo.execute(
-                    'ir.module.module',
-                    'button_immediate_install',
-                    module_ids
-                )
-                
+            if self._install_module(module_name):
                 installed.append(module_name)
-                self.log(f"Installed: {module_name}")
-                
-            except Exception as e:
-                self.log(f"Error installing {module_name}: {str(e)}", "ERROR")
+            else:
                 failed.append(module_name)
         
         return {
