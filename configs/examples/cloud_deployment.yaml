@@ -1,0 +1,40 @@
+# Multi-Tenant Cloud Deployment Configuration
+
+# Google Cloud deployment with multi-tenant support
+cloud_deployment:
+  action: "setup" # setup | deploy | create_client
+  project_id: "your-gcp-project-id"
+  region: "us-central1"
+
+  # Infrastructure settings
+  infrastructure:
+    sql_instance: "odoo-postgres"
+    sql_tier: "db-custom-2-7680" # 2 vCPUs, 7.5GB RAM
+    backup_retention: 7 # days
+
+  # Multi-tenant settings
+  multi_tenant:
+    enabled: true
+    isolation: "database" # database | container
+    max_clients: 100
+
+# Example: Create new client
+clients:
+  - name: "bearings-inc"
+    database: "bearings"
+    domain: "bearings.yourdomain.com" # optional
+
+  - name: "client-two"
+    database: "client_two"
+
+# Company configuration for each client
+company:
+  name: "Bearings Inc"
+  email: "info@bearingsinc.com"
+
+# Modules to install
+modules:
+  - website
+  - ecommerce
+  - crm
+  - inventory

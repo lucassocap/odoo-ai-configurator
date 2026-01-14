@@ -3,6 +3,7 @@ Agents package
 """
 from .automation import AutomationAgent
 from .base import OdooAgent
+from .cloud_deploy import CloudDeployAgent
 from .company import CompanyAgent
 from .integrations import IntegrationAgent
 from .modules import ModuleAgent
@@ -19,4 +20,5 @@ __all__ = [
     'IntegrationAgent',
     'AutomationAgent',
     'UserAgent',
+    'CloudDeployAgent',
 ]

@@ -5,6 +5,7 @@ Coordinates agents to fulfill configuration requests
 from typing import Any, Dict, List
 
 from .agents.automation import AutomationAgent
+from .agents.cloud_deploy import CloudDeployAgent
 from .agents.company import CompanyAgent
 from .agents.integrations import IntegrationAgent
 from .agents.modules import ModuleAgent
@@ -35,6 +36,7 @@ class Orchestrator:
             IntegrationAgent(self.connector),
             AutomationAgent(self.connector),
             UserAgent(self.connector),
+            CloudDeployAgent(self.connector),
         ]
     
     def configure(self, request: str, params: Dict[str, Any] = None) -> Dict[str, Any]:
