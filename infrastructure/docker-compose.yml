@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   web:
-    image: odoo:17
+    image: odoo:18
     container_name: odoo_web
     depends_on:
       - db
