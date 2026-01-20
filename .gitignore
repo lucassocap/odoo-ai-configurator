@@ -30,3 +30,4 @@ scripts/reset_catalog.py
 scripts/patch_prices.py
 scripts/generate_generics.py
 scripts/debug_*.py
+.vscode/
