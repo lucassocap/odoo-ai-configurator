@@ -10,3 +10,23 @@ build/
 .env
 .venv/
 venv/
+projects/
+
+# macOS
+.DS_Store
+
+# Odoo Infrastructure (Project-Specific)
+infrastructure/addons/
+infrastructure/config/
+
+# RAG Memory Database
+memory/rag/
+
+# Project-Specific Scripts (Keep only reusable ones)
+scripts/test_bearings_agent.py
+scripts/test_data_agent.py
+scripts/verify_project_*.py
+scripts/reset_catalog.py
+scripts/patch_prices.py
+scripts/generate_generics.py
+scripts/debug_*.py
